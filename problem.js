@@ -9,18 +9,31 @@ function htmlToNode(html) {
 
 var path = window.location.pathname.split('/');
 var name = path.slice(-2)[0];
-console.log(`${path}`);
 console.log(`${name}`);
 
-var prob_name = document.getElementsByClassName("text-center")[1];
+var firstChar = name.charAt(0);
 
-console.log(`Name ${prob_name}`);
+if(firstChar == firstChar.toUpperCase()) {
+	var prob_name = document.getElementsByClassName("text-center")[1];
 
-var modName = prob_name.cloneNode(true);
-var hello = "YO"
-modName.appendChild(htmlToNode(`<a href="http://uditgulati.github.io/${name}/" 
-	class="btn btn-primary" style="font-size: medium;margin-left: 10px"> 
-	<i class="fa fa-plus" aria-hidden="true"></i> ToDo!</button>`));
+	console.log(`Name ${prob_name}`);
 
-prob_name.parentNode.insertBefore(modName, prob_name);
-prob_name.style.display = 'none';
+	var modName = prob_name.cloneNode(true);
+	modName.appendChild(htmlToNode(`<button onclick="localStorage.setItem('test', '0');
+			var arr = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+			console.log(arr);
+			var set = new Set(arr);
+			console.log(set.size);
+			console.log('${name}');
+			set.add('${name}');
+			var newArr = [...set];
+			localStorage.setItem('items', JSON.stringify(newArr));"
+		class="btn btn-primary" style="font-size: medium;margin-left: 10px"> 
+		<i class="fa fa-plus" aria-hidden="true"></i> ToDo!</button>`));
+
+	prob_name.parentNode.insertBefore(modName, prob_name);
+	prob_name.style.display = 'none';
+
+	localStorage.getItem('test')
+
+}
