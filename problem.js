@@ -1,9 +1,9 @@
 
 
 function htmlToNode(html) {
-    var template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content.firstChild;
+	var template = document.createElement('template');
+	template.innerHTML = html;
+	return template.content.firstChild;
 }
 
 
@@ -34,6 +34,7 @@ if(firstChar == firstChar.toUpperCase()) {
 	prob_name.parentNode.insertBefore(modName, prob_name);
 	prob_name.style.display = 'none';
 
-	localStorage.getItem('test')
+	localStorage.getItem('test');
+
 
 }
