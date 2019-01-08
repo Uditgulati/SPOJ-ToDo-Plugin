@@ -7,7 +7,7 @@
   "description": "Easily add problems to a ToDo list and view them in profile.",
 
   "icons": {
-    "48": "icons/spoj.png"
+    "48": "icons/spoj.jpg"
   },
 
   "content_scripts": [
