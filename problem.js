@@ -54,8 +54,9 @@ if(firstChar == firstChar.toUpperCase()) {
 		<i class="fa fa-plus" aria-hidden="true"></i> ToDo!</button>`));
 	}
 
-	prob_name.parentNode.insertBefore(modName, prob_name);
-	prob_name.style.display = 'none';
+	// prob_name.parentNode.insertBefore(modName, prob_name);
+	// prob_name.style.display = 'none';
+	prob_name.replaceWith(modName);
 
 	localStorage.getItem('test');
 
