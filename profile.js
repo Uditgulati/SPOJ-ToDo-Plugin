@@ -67,5 +67,7 @@ console.log(`${newTable}`);
 
 modLists.appendChild(htmlToNode(`${newTable}`));
 
-prob_lists.parentNode.insertBefore(modLists, prob_lists);
-prob_lists.style.display = 'none';
+//prob_lists.parentNode.insertBefore(modLists, prob_lists);
+//prob_lists.style.display = 'none';
+
+prob_lists.replaceWith(modLists);
